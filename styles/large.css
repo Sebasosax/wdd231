@@ -1,0 +1,67 @@
+@media screen and (min-width: 768px) {
+    body {
+        background: url('../images/coursehome-lg.webp') no-repeat center top;
+        background-size: cover;
+        padding: 0 2rem;
+    }
+
+    header {
+        padding: 1.5rem 0;
+    }
+
+    #menuButton {
+        display: none;
+    }
+
+    nav {
+        display: block !important;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-photo-container {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .about-photo-container section {
+        flex: 1;
+    }
+
+    .about-photo-container section h2 {
+        color: var(--secondary-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .about-photo-container section img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-top: 0.5rem;
+    }
+
+    /* Certificates / Courses Grid */
+    #courses {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+}
