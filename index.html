@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course home page WDD231">
+    <meta name="author" content="Juan Diego Sebastián Sosa">
+    <title>Index | WDD231 Web Frontend Development I</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!--SCRIPTS-->
+    <script src="scripts/course.js"defer></script>
+    <script src="scripts/date.js"defer></script>
+    <script src="scripts/navigation.js"defer></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="WDD231 site logo">
+            <span>WDD231 - Juan Diego Sebastián Sosa</span>
+        </a>
+        <button id="menuButton" aria-label="Open menu">☰</button>
+        <nav id="navmenu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="final.html">Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <!-- About Me + Photo container -->
+        <div class="about-photo-container">
+            <section>
+                <h2>About Me</h2>
+                <p>My name is Sebastian Sosa. I was born and raised in Mendoza, Argentina, a region known for its beautiful landscapes, vineyards, and warm, welcoming community. Growing up there instilled in me an appreciation for nature and the simple joys of life.</p>
+                <p>I currently live in Utah, United States, with my wife. We enjoy the state's stunning mountains, outdoor activities, and friendly communities. We are happily married, and my wife recently completed her master’s degree in Nutrition and Dietetics at Utah State University.</p>
+                <p>I also had the privilege of serving a mission in Costa Rica, an experience that was deeply meaningful and helped me grow both personally and spiritually.</p>
+                <p>In my free time, I enjoy hiking in the mountains, cooking, and spending quality time with my family.</p>
+                <p>My favorite scripture is <strong>Alma 37:6–7</strong>, which teaches the power of small and simple things:</p>
+                <p>"Now ye may suppose that this is foolishness in me; but behold I say unto you, that by small and simple things are great things brought to pass; and small means in many instances doth confound the wise."</p>
+                <p>"And the Lord God doth work by means to bring about his great and eternal purposes; and by very small means the Lord doth confound the wise and bringeth about the salvation of many souls."</p>
+            </section>
+            <section class="photo-section">
+                <h2>Student Photo</h2>
+                <img src="images/me.webp" alt="Student Photo">
+            </section>
+        </div>
+
+        <!-- Certificates + filters -->
+        <section>
+            <h2>Web Certificates Course</h2>
+            <div class="course-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wdd">WDD</button>
+                <button class="filter-btn" data-filter="cse">CSE</button>
+            </div>
+
+            <!-- Total credits -->
+            <p id="total-credits">Total Credits: 0</p>
+
+            <!-- Courses container -->
+            <div id="courses"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://github.com/Sebasosax" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/juan-sosa-046479213/" target="_blank">LinkedIn</a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> Juan Diego Sebastián Sosa | Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        const courses = [
+            { title: "WDD231 - Web Frontend Development I", completed: false, credits: 2, category: "wdd" },
+            { title: "WD131 - Dynamic Web Fundamentals", completed: true, credits: 2, category: "wdd" },
+            { title: "WDD130 - Web fundamental", completed: true, credits: 2, category: "wdd" },
+            { title: "CSE110 - Introduction to Programming", completed: true, credits: 2, category: "cse" },
+            { title: "CSE111 - Programming with Functions", completed: true, credits: 2, category: "cse" },
+            { title: "CSE210 - Programming with Classes", completed: false, credits: 2, category: "cse" }
+        ];
+
+        const coursesContainer = document.getElementById("courses");
+        const totalCreditsElement = document.getElementById("total-credits");
+        const filterButtons = document.querySelectorAll(".filter-btn");
+
+        function displayCourses(filter = "all") {
+            coursesContainer.innerHTML = "";
+            let filteredCourses = courses;
+
+            if (filter !== "all") {
+                filteredCourses = courses.filter(course => course.category === filter);
+            }
+
+            filteredCourses.sort((a, b) => a.title.localeCompare(b.title));
+
+            filteredCourses.forEach(course => {
+                const card = document.createElement("div");
+                card.classList.add("course-card");
+                if (course.completed) card.classList.add("completed");
+                card.innerHTML = `
+                    <h3>${course.title}</h3>
+                    <p>Credits: ${course.credits}</p>
+                    <p>Status: ${course.completed ? "Completed" : "Pending"}</p>
+                `;
+                coursesContainer.appendChild(card);
+            });
+
+            // Calcular y mostrar el total de créditos de los cursos visibles
+            const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+            totalCreditsElement.textContent = `Total Credits: ${totalCredits}`;
+        }
+
+        // Mostrar todos los cursos al cargar
+        displayCourses();
+
+        // Configurar los botones de filtro
+        filterButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                filterButtons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                displayCourses(btn.dataset.filter);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+/* Este archivo solo se aplica a pantallas de 768px en adelante */
+@media screen and (min-width: 768px) {
+    body {
+        /* Imagen optimizada para desktop */
+        background: url('../images/coursehome-lg.webp') no-repeat center top;
+        background-size: cover;
+        padding: 0 5%; /* Más aire a los costados en pantallas grandes */
+    }
+
+    /* --- HEADER & NAV (Requisito: CSS Flex) --- */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 0;
+    }
+
+    #menuButton {
+        display: none; /* Ocultar botón hamburguesa en desktop */
+    }
+
+    nav {
+        display: block !important; /* Forzar visibilidad del menú */
+    }
+
+    nav ul {
+        display: flex; /* Uso de Flexbox según la rúbrica */
+        gap: 2.5rem;
+        list-style: none;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+        position: relative;
+    }
+
+    /* Efecto hover (Wayfinding) */
+    nav a:hover, 
+    nav a.active {
+        color: var(--secondary-color);
+    }
+
+    /* --- MAIN LAYOUT --- */
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* Contenedor de "About Me" y Foto en dos columnas */
+    .about-photo-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    .about-photo-container section {
+        flex: 2; /* El texto ocupa más espacio */
+    }
+
+    .photo-section {
+        flex: 1; /* La foto ocupa menos espacio */
+        text-align: center;
+    }
+
+    .photo-section img {
+        width: 100%;
+        max-width: 300px; /* Evita que la foto crezca demasiado */
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* --- COURSES GRID (Diseño profesional) --- */
+    #courses {
+        display: grid;
+        /* Crea columnas de al menos 250px que se ajustan solas */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .course-card {
+        margin: 0; /* Quitamos el margen vertical del móvil */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 120px;
+        text-align: center;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2rem;
+    }
+}
