@@ -1,0 +1,15 @@
+/* Estilos para pantallas grandes */
+
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    gap: 2rem;
+  }
+
+  .member-card {
+    padding: 1.5rem;
+  }
+}

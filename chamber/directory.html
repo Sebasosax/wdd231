@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chamber Directory - Juan Diego Sebastián Sosa</title>
+  <meta name="description" content="Directory page of chamber members for the WDD231 project">
+  <meta name="author" content="Juan Diego Sebastián Sosa">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/chamber-logo.webp">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Chamber Directory - Juan Diego Sebastián Sosa">
+  <meta property="og:description" content="Directory page of chamber members for the WDD231 project">
+  <meta property="og:image" content="https://sebasosax.github.io/wdd231/chamber/images/chamber-logo.webp">
+  <meta property="og:url" content="https://sebasosax.github.io/wdd231/chamber/directory.html">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <!-- JS -->
+  <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <img src="images/chamber-logo.webp" alt="Chamber Logo" class="header-logo">
+      <h1>Chamber of Commerce Directory</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="view-buttons">
+      <button id="gridView">Grid View</button>
+      <button id="listView">List View</button>
+    </div>
+
+    <div id="members" class="grid-view">
+      <!-- Los miembros se cargarán aquí desde members.json -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Juan Diego Sebastián Sosa | WDD231 | &copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span>
+  </footer>
+
+  <!-- JS para fecha del footer -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+
+</body>
+</html>

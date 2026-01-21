@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Bodega Sol de Mayo",
+    "address": "123 Calzada Salamone, Mendoza",
+    "phone": "261-123-4567",
+    "website": "https://bodegasoldemayo.com",
+    "image": "sol_de_mayo.webp",
+    "level": 3
+  },
+  {
+    "name": "Café San Martín",
+    "address": "456 Calle San Martín, Mendoza",
+    "phone": "261-987-6543",
+    "website": "https://cafesanmarin.com",
+    "image": "company2.jpg",
+    "level": 2
+  },
+  {
+    "name": "Panadería La Tradición",
+    "address": "789 Calle Las Heras, Mendoza",
+    "phone": "261-456-7890",
+    "website": "https://panaderialatradicion.com",
+    "image": "company3.jpg",
+    "level": 1
+  },
+  {
+    "name": "Muebles Fucci",
+    "address": "321 Calle Rioja, Mendoza",
+    "phone": "261-654-3210",
+    "website": "https://mueblesdelsol.com",
+    "image": "company4.jpg",
+    "level": 3
+  },
+  {
+    "name": "Librería Andes",
+    "address": "654 Calle San Juan, Mendoza",
+    "phone": "261-789-1234",
+    "website": "https://libreriaandes.com",
+    "image": "company5.jpg",
+    "level": 2
+  },
+  {
+    "name": "Electrónica Mendoza",
+    "address": "987 Calle Godoy Cruz, Mendoza",
+    "phone": "261-321-9876",
+    "website": "https://electronicamendoza.com",
+    "image": "company6.jpg",
+    "level": 1
+  },
+  {
+    "name": "Turismo Cuyo",
+    "address": "159 Avenida Libertador, Mendoza",
+    "phone": "261-852-9637",
+    "website": "https://turismocuyo.com",
+    "image": "company7.jpg",
+    "level": 3
+  }
+]
