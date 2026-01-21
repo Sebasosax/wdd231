@@ -1,0 +1,23 @@
+{
+  "family_name": "Sosa",
+  "move_in_date": "2025-01-10",
+  "number_of_people": 3,
+  "visited_by_bishopric": false,
+  "family_members": [
+    {
+      "name": "Juan Diego Sosa",
+      "gender": "Male",
+      "birthdate": "1996-04-12"
+    },
+    {
+      "name": "Maria Sosa",
+      "gender": "Female",
+      "birthdate": "1998-09-21"
+    },
+    {
+      "name": "Lucas Sosa",
+      "gender": "Male",
+      "birthdate": "2021-06-03"
+    }
+  ]
+}
