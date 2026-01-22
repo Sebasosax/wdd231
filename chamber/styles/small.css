@@ -1,33 +1,72 @@
-/* Barra azul con logo */
+/* ============================= */
+/* Small Screen Styles (Mobile)  */
+/* ============================= */
+
+/* Fuente y colores */
+body {
+  font-family: 'Outfit', 'Roboto', Arial, sans-serif;
+  background-color: #fff8e1;
+  color: #333;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Logo de fondo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('../images/chamber-logo.webp');
+  background-repeat: no-repeat;
+  background-size: 200px;
+  opacity: 0.05;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Header */
 header {
-  background-color: #004080;
+  background-color: #d4a017;
   color: white;
   padding: 0.5rem 1rem;
+  z-index: 1;
 }
 
 .header-container {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
 .header-logo {
-  width: 60px;
+  width: 100px;
   height: auto;
   border-radius: 5px;
+  z-index: 1;
 }
 
 header h1 {
   margin: 0;
   font-size: 1.5rem;
+  z-index: 1;
 }
 
 /* Navegación */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
-  padding: 0.5rem 0 0.5rem 0;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
   margin: 0;
 }
 
@@ -41,7 +80,34 @@ nav ul li a.active {
   text-decoration: underline;
 }
 
-/* Main grid y list views */
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url('../images/hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay {
+  background-color: rgba(0,0,0,0.4);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.hero h2 {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* Botones de vista */
 .view-buttons {
   margin: 1rem;
 }
@@ -50,13 +116,25 @@ nav ul li a.active {
   margin-right: 0.5rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  background-color: #d4a017;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  z-index: 1;
 }
 
+.view-buttons button:hover {
+  background-color: #b3860f;
+}
+
+/* Miembros */
 #members {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   padding: 1rem;
+  flex: 1;
+  z-index: 1;
 }
 
 #members.list-view {
@@ -64,14 +142,49 @@ nav ul li a.active {
 }
 
 .member-card {
-  background-color: #f2f2f2;
+  background-color: #fff3b0;
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1;
 }
 
 .member-card img {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
+}
+
+/* Footer compacto */
+footer {
+  background-color: #d4a017;
+  color: white;
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: auto;
+  z-index: 1;
+  width: 100%;
+}
+
+footer hr {
+  border: 0.5px solid white;
+  margin: 0.5rem auto;
+  width: 80%;
+  opacity: 0.5;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #fff3b0;
+}
+
+footer .footer-info {
+  padding: 0 1rem;
+  margin: 0;
 }

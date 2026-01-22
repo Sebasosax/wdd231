@@ -11,6 +11,11 @@
   <!-- Favicon -->
   <link rel="icon" href="images/chamber-logo.webp">
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="Chamber Directory - Juan Diego Sebastián Sosa">
   <meta property="og:description" content="Directory page of chamber members for the WDD231 project">
@@ -32,17 +37,23 @@
     <div class="header-container">
       <img src="images/chamber-logo.webp" alt="Chamber Logo" class="header-logo">
       <h1>Chamber of Commerce Directory</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="directory.html" class="active">Directory</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
   </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h2>Connecting Opportunities and Driving Growth</h2>
+    </div>
+  </section>
 
   <!-- Main -->
   <main>
@@ -52,16 +63,20 @@
     </div>
 
     <div id="members" class="grid-view">
-      <!-- Los miembros se cargarán aquí desde members.json -->
+      <!-- Members will load from members.json -->
     </div>
   </main>
 
   <!-- Footer -->
   <footer>
-    Juan Diego Sebastián Sosa | WDD231 | &copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span>
+    <div class="footer-info">
+      <p>Chamber of Commerce - Mendoza | 123 Business St, Mendoza | Phone: 261-000-0000</p>
+      <hr>
+      <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+    </div>
   </footer>
 
-  <!-- JS para fecha del footer -->
+  <!-- JS for footer dates -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('lastModified').textContent = document.lastModified;

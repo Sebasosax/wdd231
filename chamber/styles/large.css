@@ -1,6 +1,16 @@
-/* Estilos para pantallas grandes */
+/* ============================= */
+/* Large Screen Styles (Desktop) */
+/* ============================= */
 
 @media (min-width: 768px) {
+
+  /* Header horizontal */
+  .header-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   header h1 {
     font-size: 2rem;
   }
@@ -9,7 +19,28 @@
     gap: 2rem;
   }
 
+  /* Tarjetas */
   .member-card {
     padding: 1.5rem;
+  }
+
+  #members {
+    gap: 1.5rem;
+  }
+
+  /* Fondo logo más grande en escritorio */
+  body::before {
+    background-size: 300px;
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Hero en escritorio */
+  .hero {
+    height: 450px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
   }
 }
