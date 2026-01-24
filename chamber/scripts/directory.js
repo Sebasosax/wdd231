@@ -4,13 +4,14 @@ const listBtn = document.getElementById('listView');
 
 const url = 'data/members.json';
 
+// Fetch members using async/await
 async function getMembers() {
   const response = await fetch(url);
   const data = await response.json();
-
   displayMembers(data);
 }
 
+// Display members
 function displayMembers(members) {
   membersContainer.innerHTML = '';
 
@@ -30,7 +31,7 @@ function displayMembers(members) {
   });
 }
 
-// Cambiar vista
+// Grid/List toggle
 gridBtn.addEventListener('click', () => {
   membersContainer.classList.remove('list-view');
 });
@@ -39,5 +40,13 @@ listBtn.addEventListener('click', () => {
   membersContainer.classList.add('list-view');
 });
 
-// Ejecutar
+// Hamburger menu toggle
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+});
+
+// Execute fetch
 getMembers();

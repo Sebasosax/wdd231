@@ -2,7 +2,6 @@
 /* Small Screen Styles (Mobile)  */
 /* ============================= */
 
-/* Fuente y colores */
 body {
   font-family: 'Outfit', 'Roboto', Arial, sans-serif;
   background-color: #fff8e1;
@@ -15,7 +14,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Logo de fondo */
 body::before {
   content: "";
   position: fixed;
@@ -61,23 +59,32 @@ header h1 {
 }
 
 /* Navegación */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 11;
+}
+
 nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: none;
+  flex-direction: column;
   gap: 0.5rem;
-  padding: 0;
-  margin: 0;
+  background-color: #d4a017;
+  padding: 1rem;
+  border-radius: 5px;
+  position: absolute;
+  top: 60px;
+  right: 1rem;
+  z-index: 10;
 }
 
 nav ul li a {
   color: white;
-  text-decoration: none;
   font-weight: bold;
-}
-
-nav ul li a.active {
-  text-decoration: underline;
+  display: block;
 }
 
 /* Hero Section */
@@ -156,7 +163,7 @@ nav ul li a.active {
   border-radius: 5px;
 }
 
-/* Footer compacto */
+/* Footer */
 footer {
   background-color: #d4a017;
   color: white;
@@ -187,4 +194,57 @@ footer a:hover {
 footer .footer-info {
   padding: 0 1rem;
   margin: 0;
+}
+
+/* Media Query para escritorio */
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: none;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .member-card {
+    padding: 1.5rem;
+  }
+
+  #members {
+    gap: 1.5rem;
+  }
+
+  body::before {
+    background-size: 300px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero {
+    height: 450px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Clase para mostrar menú en móvil */
+nav ul.show {
+  display: flex;
 }
