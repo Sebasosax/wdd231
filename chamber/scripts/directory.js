@@ -2,16 +2,27 @@ const membersContainer = document.getElementById('members');
 const gridBtn = document.getElementById('gridView');
 const listBtn = document.getElementById('listView');
 
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
 const url = 'data/members.json';
 
-// Fetch members using async/await
+/* =============================
+   FETCH MEMBERS (ASYNC/AWAIT)
+============================= */
 async function getMembers() {
-  const response = await fetch(url);
-  const data = await response.json();
-  displayMembers(data);
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    displayMembers(data);
+  } catch (error) {
+    console.error('Error loading members:', error);
+  }
 }
 
-// Display members
+/* =============================
+   DISPLAY MEMBERS
+============================= */
 function displayMembers(members) {
   membersContainer.innerHTML = '';
 
@@ -19,19 +30,27 @@ function displayMembers(members) {
     const card = document.createElement('div');
     card.classList.add('member-card');
 
+    let imageHTML = '';
+    if (member.image) {
+      imageHTML = `<img src="images/${member.image}" alt="${member.name} logo">`;
+    }
+
     card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name}">
+      ${imageHTML}
       <h3>${member.name}</h3>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">Visit Website</a>
+      <p>📍 ${member.address}</p>
+      <p>📞 ${member.phone}</p>
+      <p>✉️ ${member.email}</p>
+      <a href="${member.website}" target="_blank">🌐 Website</a>
     `;
 
     membersContainer.appendChild(card);
   });
 }
 
-// Grid/List toggle
+/* =============================
+   GRID / LIST TOGGLE
+============================= */
 gridBtn.addEventListener('click', () => {
   membersContainer.classList.remove('list-view');
 });
@@ -40,13 +59,14 @@ listBtn.addEventListener('click', () => {
   membersContainer.classList.add('list-view');
 });
 
-// Hamburger menu toggle
-const menuToggle = document.getElementById('menuToggle');
-const navMenu = document.getElementById('navMenu');
-
+/* =============================
+   HAMBURGER MENU
+============================= */
 menuToggle.addEventListener('click', () => {
   navMenu.classList.toggle('show');
 });
 
-// Execute fetch
+/* =============================
+   INIT
+============================= */
 getMembers();

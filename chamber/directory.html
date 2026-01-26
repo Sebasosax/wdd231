@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Chamber Directory - Juan Diego Sebastián Sosa</title>
-  <meta name="description" content="Directory page of chamber members for the WDD231 project">
+  <title>Chamber of Commerce Directory | Mendoza</title>
+  <meta name="description" content="Mendoza Chamber of Commerce member directory">
   <meta name="author" content="Juan Diego Sebastián Sosa">
 
   <!-- Favicon -->
@@ -14,13 +14,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Chamber Directory - Juan Diego Sebastián Sosa">
-  <meta property="og:description" content="Directory page of chamber members for the WDD231 project">
-  <meta property="og:image" content="https://sebasosax.github.io/wdd231/chamber/images/chamber-logo.webp">
-  <meta property="og:url" content="https://sebasosax.github.io/wdd231/chamber/directory.html">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
@@ -30,58 +24,54 @@
   <!-- JS -->
   <script src="scripts/directory.js" defer></script>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="header-container">
-      <img src="images/chamber-logo.webp" alt="Chamber Logo" class="header-logo">
-      <h1>Chamber of Commerce Directory – City of Mendoza</h1>
-      <nav>
-        <button id="menuToggle" class="hamburger" aria-label="Open navigation menu">&#9776;</button>
-        <ul id="navMenu">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="directory.html" class="active">Directory</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="header-container">
+    <img src="images/chamber-logo.webp" alt="Mendoza Chamber Logo" class="header-logo">
+    <h1>Mendoza Chamber of Commerce</h1>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-overlay">
-      <h2>Connecting Opportunities and Driving Growth</h2>
-    </div>
+    <nav>
+      <button id="menuToggle" class="hamburger" aria-label="Open navigation menu">&#9776;</button>
+      <ul id="navMenu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-overlay">
+    <h2>Connecting Businesses Across Mendoza</h2>
+  </div>
+</section>
+
+<main>
+  <div class="view-buttons">
+    <button id="gridView">Grid View</button>
+    <button id="listView">List View</button>
+  </div>
+
+  <section id="members" class="grid-view">
+    <!-- Members loaded via JS -->
   </section>
+</main>
 
-  <!-- Main -->
-  <main>
-    <div class="view-buttons">
-      <button id="gridView">Grid View</button>
-      <button id="listView">List View</button>
-    </div>
+<footer>
+  <p>Mendoza Chamber of Commerce</p>
+  <hr>
+  <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+</footer>
 
-    <div id="members" class="grid-view">
-      <!-- Members will load from members.json -->
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-info">
-      <p>Chamber of Commerce - Mendoza | 123 Business St, Mendoza | Phone: 261-000-0000</p>
-      <hr>
-      <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
-    </div>
-  </footer>
-
-  <!-- JS for footer dates -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = document.lastModified;
-  </script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('lastModified').textContent = document.lastModified;
+</script>
 
 </body>
 </html>
+
