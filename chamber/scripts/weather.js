@@ -6,39 +6,29 @@ const currentTempEl = document.getElementById("current-temp");
 const weatherDescEl = document.getElementById("weather-desc");
 const forecastEl = document.getElementById("forecast");
 
-
-function kelvinToCelsius(kelvin) {
-  return (kelvin - 273.15).toFixed(1);
-}
-
-
 function formatDate(timestamp) {
   const date = new Date(timestamp * 1000);
   return date.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
 }
 
-
 async function fetchWeather() {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${apiKey}&units=metric&lang=en`
+      `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=metric&lang=en&appid=${apiKey}`
     );
+
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
     const data = await response.json();
-
-    if (!data.current) throw new Error("No current weather data");
-
 
     currentTempEl.textContent = `Temperature: ${data.current.temp.toFixed(1)}°C`;
     weatherDescEl.textContent = `Condition: ${data.current.weather[0].description}`;
 
-   
     forecastEl.innerHTML = "";
     data.daily.slice(1, 4).forEach(day => {
       const dayDiv = document.createElement("div");
       dayDiv.classList.add("forecast-day");
-      dayDiv.innerHTML = `
-        <strong>${formatDate(day.dt)}</strong>: ${day.temp.day.toFixed(1)}°C, ${day.weather[0].description}
-      `;
+      dayDiv.innerHTML = `<strong>${formatDate(day.dt)}</strong>: ${day.temp.day.toFixed(1)}°C, ${day.weather[0].description}`;
       forecastEl.appendChild(dayDiv);
     });
   } catch (error) {
@@ -48,6 +38,5 @@ async function fetchWeather() {
     forecastEl.innerHTML = "";
   }
 }
-
 
 fetchWeather();
