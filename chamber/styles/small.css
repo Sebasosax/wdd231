@@ -1,4 +1,6 @@
-
+/* ============================= */
+/* GLOBAL STYLES (ALL PAGES) */
+/* ============================= */
 * {
   box-sizing: border-box;
 }
@@ -14,7 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-
 body::before {
   content: "";
   position: fixed;
@@ -28,7 +29,9 @@ body::before {
   z-index: 0;
 }
 
-
+/* ============================= */
+/* HEADER & NAVIGATION */
+/* ============================= */
 header {
   background-color: #d4a017;
   color: white;
@@ -52,7 +55,6 @@ header h1 {
   font-size: 1.4rem;
   margin: 0;
 }
-
 
 nav {
   position: relative;
@@ -92,56 +94,27 @@ nav {
   text-decoration: underline;
 }
 
-
-
-.hero {
-  height: 280px;
-  background: url("../images/hero-image.jpg") center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-overlay {
-  background: rgba(0,0,0,0.45);
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-}
-
-.hero h2 {
-  color: white;
-  text-align: center;
-  margin: 0;
-}
-
-
-
-main {
-  flex: 1;
-  position: relative;
-  z-index: 1;
-}
-
-.view-buttons {
-  margin: 1rem;
-}
-
-.view-buttons button {
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+footer {
   background-color: #d4a017;
   color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin-right: 0.5rem;
-  border-radius: 5px;
-  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
 
-.view-buttons button:hover {
-  background-color: #b3860f;
+footer hr {
+  border: 0.5px solid white;
+  opacity: 0.5;
+  margin: 0.5rem auto;
+  width: 80%;
 }
 
-
-
+/* ============================= */
+/* DIRECTORY PAGE (directory.html) */
+/* ============================= */
 #members {
   display: grid;
   grid-template-columns: 1fr;
@@ -185,8 +158,7 @@ main {
   text-decoration: none;
 }
 
-
-
+/* LIST VIEW */
 #members.list-view {
   display: block;
 }
@@ -203,19 +175,249 @@ main {
   display: none;
 }
 
-
-
-footer {
-  background-color: #d4a017;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+/* GRID/LIST TOGGLE BUTTONS */
+.view-buttons {
+  margin: 1rem;
 }
 
-footer hr {
-  border: 0.5px solid white;
-  opacity: 0.5;
-  margin: 0.5rem auto;
-  width: 80%;
+.view-buttons button {
+  background-color: #d4a017;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-buttons button:hover {
+  background-color: #b3860f;
+}
+
+/* DIRECTORY HERO TEXTUAL BOX */
+.hero-textual {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 1rem;
+}
+
+.hero-box {
+  background-color: #fff3b0;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hero-box h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.hero-box p {
+  font-size: 1.1rem;
+}
+
+/* ============================= */
+/* INDEX PAGE (index.html) */
+/* ============================= */
+#hero-index {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+#hero-index img.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#hero-index .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+#hero-index .hero-overlay h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+#hero-index .hero-overlay p {
+  font-size: 1.2rem;
+}
+
+/* WELCOME CARD */
+#welcome-card-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 1rem;
+}
+
+.welcome-card {
+  background-color: #fff3b0;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 700px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.welcome-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.welcome-card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* CTA BUTTON */
+#index .cta {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#index .cta-button {
+  background-color: #d4a017;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+#index .cta-button:hover {
+  background-color: #b3860f;
+}
+
+/* EVENTS */
+#index .events, 
+#index .weather, 
+#index .spotlights {
+  margin-bottom: 2rem;
+}
+
+#index .events ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#index .events li {
+  background-color: #fff3b0;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+/* WEATHER */
+#index .weather {
+  background-color: #cce7ff;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+#index .forecast-day {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #e6f2ff;
+  border-radius: 6px;
+}
+
+/* SPOTLIGHTS */
+#index .spotlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#index .spotlights .member-card {
+  background-color: #fff3b0;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#index .spotlights .member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+#index .spotlights .member-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+/* ============================= */
+/* SPOTLIGHTS (INDEX.HTML) SMALL SCREENS */
+/* ============================= */
+.spotlights {
+  margin: 2rem 1rem;
+}
+
+#spotlight-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#spotlight-cards .member-card {
+  background-color: #fff3b0;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#spotlight-cards .member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+#spotlight-cards .member-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+#spotlight-cards .member-card h3 {
+  margin: 0.5rem 0;
+}
+
+#spotlight-cards .member-card p {
+  margin: 0.25rem 0;
+}
+
+#spotlight-cards .member-card a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
 }

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mendoza Chamber of Commerce | Home</title>
+  <meta name="description" content="Official home page of the Mendoza Chamber of Commerce">
+  <meta name="author" content="Juan Diego Sebastián Sosa">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/chamber-logo.webp">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <!-- JS -->
+  <script src="scripts/wheater.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <img src="images/chamber-logo.webp" alt="Mendoza Chamber Logo" class="header-logo">
+    <h1>Mendoza Chamber of Commerce</h1>
+
+    <nav>
+      <button id="menuToggle" class="hamburger" aria-label="Open navigation menu">&#9776;</button>
+      <ul id="navMenu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO CON IMAGEN DE ANCHO COMPLETO Y FRASE ENCIMA -->
+<section id="hero-index">
+  <img src="images/hero-image.webp" alt="Mendoza Chamber Hero Image" class="hero-image">
+  <div class="hero-overlay">
+    <h1>Connecting Businesses Across Mendoza</h1>
+    <p>Join our community to grow your network</p>
+  </div>
+</section>
+
+<!-- WELCOME CARD -->
+<div id="welcome-card-wrapper">
+  <section class="welcome-card">
+    <h2>Welcome to the Mendoza Chamber of Commerce</h2>
+    <p>Your connection to local businesses, events, and networking opportunities in Mendoza.</p>
+  </section>
+</div>
+
+<main id="index">
+  <!-- CALL TO ACTION -->
+  <section class="cta">
+    <h2>Join the Mendoza Chamber</h2>
+    <p>Support local businesses and grow your network.</p>
+    <a href="join.html" class="cta-button">Join the Chamber</a>
+  </section>
+
+  <!-- CURRENT EVENTS -->
+  <section class="events">
+    <h2>Current Events</h2>
+    <ul>
+      <li>🍷 Wine Expo – March 15</li>
+      <li>🤝 Business Networking – April 2</li>
+      <li>🏔️ Tourism Summit – April 20</li>
+    </ul>
+  </section>
+
+  <!-- WEATHER -->
+  <section class="weather">
+    <h2>Weather</h2>
+    <p id="current-temp">Loading temperature...</p>
+    <p id="weather-desc"></p>
+    <div id="forecast"></div>
+  </section>
+
+  <!-- SPOTLIGHTS -->
+  <section class="spotlights">
+    <h2>Business Spotlights</h2>
+    <div id="spotlight-cards"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Mendoza Chamber of Commerce</p>
+  <hr>
+  <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('lastModified').textContent = document.lastModified;
+
+  // Toggle menu (hamburger)
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>
