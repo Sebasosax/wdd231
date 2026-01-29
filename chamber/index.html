@@ -24,6 +24,16 @@
   <!-- JS -->
   <script src="scripts/weather.js" defer></script>
   <script src="scripts/spotlights.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Mendoza Chamber of Commerce | Home">
+  <meta property="og:description" content="Official home page of the Mendoza Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sebasosax.github.io/wdd231/chamber/index.html">
+  <meta property="og:image" content="https://sebasosax.github.io/wdd231/chamber/images/hero-image.webp">
+
+
 </head>
 
 <body>
@@ -100,19 +110,6 @@
   <hr>
   <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
 </footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  document.getElementById('lastModified').textContent = document.lastModified;
-
-  // Toggle menu (hamburger)
-  const menuToggle = document.getElementById('menuToggle');
-  const navMenu = document.getElementById('navMenu');
-
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-  });
-</script>
 
 </body>
 </html>

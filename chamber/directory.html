@@ -23,6 +23,14 @@
 
   <!-- JS -->
   <script src="scripts/directory.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Mendoza Chamber of Commerce | Directory">
+  <meta property="og:description" content="Mendoza Chamber of Commerce member directory – Connect with local businesses">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sebasosax.github.io/wdd231/chamber/directory.html">
+  <meta property="og:image" content="https://sebasosax.github.io/wdd231/chamber/images/chamber-logo.webp">
 </head>
 
 <body>
@@ -53,6 +61,8 @@
 </section>
 
 <main>
+  <h1>Mendoza Chamber Directory</h1>
+
   <div class="view-buttons">
     <button id="gridView">Grid View</button>
     <button id="listView">List View</button>
@@ -68,11 +78,6 @@
   <hr>
   <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
 </footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  document.getElementById('lastModified').textContent = document.lastModified;
-</script>
 
 </body>
 </html>
