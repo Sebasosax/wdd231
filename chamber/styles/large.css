@@ -1,5 +1,6 @@
 @media (min-width: 768px) {
 
+
   .header-container {
     flex-direction: row;
     align-items: center;
@@ -10,7 +11,7 @@
     font-size: 2rem;
   }
 
-  /* Desktop nav */
+ 
   .hamburger {
     display: none;
   }
@@ -21,7 +22,8 @@
     gap: 2rem;
   }
 
-  /* Bigger hero */
+ 
+
   .hero {
     height: 450px;
   }
@@ -30,9 +32,20 @@
     font-size: 2rem;
   }
 
-  /* Background logo bigger */
+ 
+
   body::before {
     width: 300px;
     height: 300px;
+  }
+
+ 
+
+  #members {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .member-card img {
+    height: 180px;
   }
 }

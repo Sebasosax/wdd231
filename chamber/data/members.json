@@ -23,7 +23,7 @@
     "phone": "+54 261 456 7890",
     "email": "hello@latradicionbakery.com",
     "website": "https://panaderialatradicion.com",
-    "image": "",
+    "image": "Latradicion_Bakery.webp",
     "level": 1
   },
   {
@@ -32,7 +32,7 @@
     "phone": "+54 261 654 3210",
     "email": "sales@fuccifurniture.com",
     "website": "https://mueblesdelsol.com",
-    "image": "company4.jpg",
+    "image": "Fucci_Furniture.webp",
     "level": 3
   },
   {
@@ -45,12 +45,12 @@
     "level": 2
   },
   {
-    "name": "Electrónica Mendoza",
+    "name": "Electronics Mendoza",
     "address": "987 Godoy Cruz Street, Mendoza",
     "phone": "+54 261 321 9876",
     "email": "support@electronicamendoza.com",
     "website": "https://electronicamendoza.com",
-    "image": "",
+    "image": "Mendoza_Electronics.webp",
     "level": 1
   },
   {
@@ -59,7 +59,7 @@
     "phone": "+54 261 852 9637",
     "email": "info@turismocuyo.com",
     "website": "https://turismocuyo.com",
-    "image": "",
+    "image": "Turismo_Cuyo.webp",
     "level": 3
   }
 ]

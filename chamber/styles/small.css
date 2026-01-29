@@ -1,6 +1,3 @@
-/* ============================= */
-/* GLOBAL STYLES */
-/* ============================= */
 
 * {
   box-sizing: border-box;
@@ -17,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Background logo */
+
 body::before {
   content: "";
   position: fixed;
@@ -31,9 +28,6 @@ body::before {
   z-index: 0;
 }
 
-/* ============================= */
-/* HEADER */
-/* ============================= */
 
 header {
   background-color: #d4a017;
@@ -59,9 +53,6 @@ header h1 {
   margin: 0;
 }
 
-/* ============================= */
-/* NAVIGATION */
-/* ============================= */
 
 nav {
   position: relative;
@@ -101,9 +92,7 @@ nav {
   text-decoration: underline;
 }
 
-/* ============================= */
-/* HERO */
-/* ============================= */
+
 
 .hero {
   height: 280px;
@@ -125,9 +114,7 @@ nav {
   margin: 0;
 }
 
-/* ============================= */
-/* MAIN */
-/* ============================= */
+
 
 main {
   flex: 1;
@@ -157,33 +144,47 @@ main {
 
 #members {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1rem;
 }
 
 .member-card {
-  background-color: #fff3b0;
+  background: white;
   padding: 1rem;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .member-card img {
-  max-width: 100%;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
 }
 
 .member-card h3 {
   margin: 0.5rem 0;
 }
 
+.member-card p {
+  margin: 0.25rem 0;
+}
+
 .member-card a {
   color: #333;
   font-weight: bold;
+  text-decoration: none;
 }
+
 
 
 #members.list-view {
@@ -191,7 +192,6 @@ main {
 }
 
 #members.list-view .member-card {
-  display: block;
   text-align: left;
   border-bottom: 1px solid #ccc;
   border-radius: 0;
@@ -203,9 +203,7 @@ main {
   display: none;
 }
 
-/* ============================= */
-/* FOOTER */
-/* ============================= */
+
 
 footer {
   background-color: #d4a017;
