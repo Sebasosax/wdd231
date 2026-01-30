@@ -23,7 +23,7 @@ body::before {
   margin: auto;
   width: 200px;
   height: 200px;
-  background: url("../images/chamber-logo.webp") no-repeat center / contain;
+  background: url("images/chamber-logo.webp") no-repeat center / contain; /* corregido */
   opacity: 0.05;
   pointer-events: none;
   z-index: 0;
@@ -33,8 +33,8 @@ body::before {
 /* HEADER & NAVIGATION */
 /* ============================= */
 header {
-  background-color: #6b1f4f; /* violeta vino tinto */
-  color: black;
+  background-color: #6b1f4f; /* vino oscuro */
+  color: white; /* cambio a blanco */
   padding: 1rem;
   position: relative;
   z-index: 1;
@@ -53,7 +53,7 @@ header {
 }
 
 header h1, header h2 {
-  color: black;
+  color: white; /* cambio a blanco */
 }
 
 nav {
@@ -64,7 +64,7 @@ nav {
   background: none;
   border: none;
   font-size: 2rem;
-  color: black;
+  color: white;
   cursor: pointer;
   display: block;
 }
@@ -101,8 +101,8 @@ nav {
 /* FOOTER */
 /* ============================= */
 footer {
-  background-color: #6b1f4f; /* violeta vino tinto */
-  color: black;
+  background-color: #6b1f4f; /* vino oscuro */
+  color: white; /* cambio a blanco */
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
@@ -110,14 +110,14 @@ footer {
 }
 
 footer hr {
-  border: 0.5px solid black;
+  border: 0.5px solid white; /* cambio a blanco */
   opacity: 0.5;
   margin: 0.5rem auto;
   width: 80%;
 }
 
 /* ============================= */
-/* DIRECTORY PAGE (directory.html) */
+/* DIRECTORY PAGE */
 /* ============================= */
 #members {
   display: grid;
@@ -291,5 +291,3 @@ footer hr {
 #index .cta-button:hover {
   background-color: #5a1a42;
 }
-
-/* WEATHER, EVENTS, SPOTLIGHTS similar updates omitted for brevity; all background violeta claro y texto negro */

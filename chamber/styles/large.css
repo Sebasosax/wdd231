@@ -1,6 +1,3 @@
-/* ============================= */
-/* LARGE SCREEN STYLES (min-width: 768px) */
-/* ============================= */
 @media (min-width: 768px) {
 
   /* ============================= */
@@ -14,7 +11,7 @@
 
   header h1, header h2 {
     font-size: 2rem;
-    color: black;
+    color: white; /* cambio a blanco */
   }
 
   .hamburger {
@@ -40,10 +37,11 @@
   body::before {
     width: 300px;
     height: 300px;
+    background: url("images/chamber-logo.webp") no-repeat center / contain; /* corregido */
   }
 
   /* ============================= */
-  /* DIRECTORY PAGE (directory.html) */
+  /* DIRECTORY PAGE */
   /* ============================= */
   #members {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -85,7 +83,7 @@
   }
 
   /* ============================= */
-  /* INDEX PAGE (index.html) */
+  /* INDEX PAGE */
   /* ============================= */
   #hero-index {
     height: 450px;
@@ -142,7 +140,7 @@
   }
 
   /* ============================= */
-  /* SPOTLIGHTS INDEX LARGE */
+  /* SPOTLIGHTS */
   /* ============================= */
   #spotlight-cards {
     display: grid;
@@ -178,6 +176,18 @@
   }
 
   /* ============================= */
+  /* FOOTER */
+  /* ============================= */
+  footer {
+    background-color: #6b1f4f; /* vino oscuro */
+    color: white; /* cambio a blanco */
+  }
+
+  footer hr {
+    border-color: white;
+  }
+
+  /* ============================= */
   /* GENERAL TYPOGRAPHY / SPACING LARGE */
   /* ============================= */
   .view-buttons {
@@ -186,17 +196,5 @@
 
   .hero-box p, .welcome-card p {
     line-height: 1.6;
-  }
-
-  /* ============================= */
-  /* FOOTER */
-  /* ============================= */
-  footer {
-    background-color: #6b1f4f;
-    color: black;
-  }
-
-  footer hr {
-    border-color: black;
   }
 }
