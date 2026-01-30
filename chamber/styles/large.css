@@ -118,4 +118,27 @@
   #spotlight-cards .member-card img {
     height: 180px;
   }
+
+  #spotlight-cards .member-card h3 {
+    font-size: 1.25rem;
+  }
+
+  #spotlight-cards .member-card p {
+    font-size: 1rem;
+  }
+
+  #spotlight-cards .member-card a {
+    font-size: 0.95rem;
+  }
+
+  /* ============================= */
+  /* GENERAL TYPOGRAPHY / SPACING LARGE */
+  /* ============================= */
+  .view-buttons {
+    margin: 2rem 0;
+  }
+
+  .hero-box p, .welcome-card p {
+    line-height: 1.6;
+  }
 }

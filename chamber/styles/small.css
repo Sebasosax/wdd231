@@ -14,7 +14,6 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  display: flex;
 }
 
 body::before {
@@ -45,6 +44,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: center;
 }
 
 .header-logo {
@@ -55,6 +55,7 @@ header {
 header h1 {
   font-size: 1.4rem;
   margin: 0;
+  text-align: center;
 }
 
 nav {
@@ -77,6 +78,7 @@ nav {
   padding: 0;
   margin: 0.5rem 0 0;
   background-color: #d4a017;
+  width: 100%;
 }
 
 #navMenu.show {
@@ -88,6 +90,8 @@ nav {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  display: block;
+  text-align: center;
 }
 
 #navMenu li a:hover,
@@ -180,6 +184,7 @@ footer hr {
 /* GRID/LIST TOGGLE BUTTONS */
 .view-buttons {
   margin: 1rem;
+  text-align: center;
 }
 
 .view-buttons button {
@@ -375,9 +380,22 @@ footer hr {
   border-radius: 6px;
   margin-bottom: 0.5rem;
 }
-/* ============================= */
+
+#index .spotlights .member-card h3 {
+  margin: 0.5rem 0;
+}
+
+#index .spotlights .member-card p {
+  margin: 0.25rem 0;
+}
+
+#index .spotlights .member-card a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 /* SPOTLIGHTS (INDEX.HTML) SMALL SCREENS */
-/* ============================= */
 .spotlights {
   margin: 2rem 1rem;
 }
