@@ -1,3 +1,6 @@
+/* ============================= */
+/* LARGE SCREEN STYLES (min-width: 768px) */
+/* ============================= */
 @media (min-width: 768px) {
 
   /* ============================= */
@@ -9,8 +12,9 @@
     justify-content: space-between;
   }
 
-  header h1 {
+  header h1, header h2 {
     font-size: 2rem;
+    color: black;
   }
 
   .hamburger {
@@ -21,6 +25,16 @@
     display: flex !important;
     flex-direction: row;
     gap: 2rem;
+    background-color: #d8c4f0; /* violeta claro */
+  }
+
+  #navMenu li a {
+    color: black;
+  }
+
+  #navMenu li a:hover,
+  #navMenu li a.active {
+    text-decoration: underline;
   }
 
   body::before {
@@ -36,6 +50,11 @@
     padding: 2rem;
   }
 
+  .member-card {
+    background-color: #d8c4f0;
+    color: black;
+  }
+
   .member-card img {
     height: 180px;
   }
@@ -46,15 +65,23 @@
 
   .hero-box h2 {
     font-size: 2rem;
+    color: black;
   }
 
   .hero-box p {
     font-size: 1.2rem;
+    color: black;
   }
 
   .view-buttons button {
     padding: 0.75rem 1.5rem;
     font-size: 1.05rem;
+    background-color: #d8c4f0;
+    color: black;
+  }
+
+  .view-buttons button:hover {
+    background-color: #5a1a42;
   }
 
   /* ============================= */
@@ -78,26 +105,40 @@
 
   .welcome-card {
     padding: 3rem;
+    background-color: #d8c4f0;
+    color: black;
   }
 
   #index .cta-button {
     padding: 1rem 2rem;
     font-size: 1.1rem;
+    background-color: #d8c4f0;
+    color: black;
+  }
+
+  #index .cta-button:hover {
+    background-color: #5a1a42;
   }
 
   #index .events li {
     padding: 0.75rem 1.5rem;
     font-size: 1.05rem;
+    background-color: #d8c4f0;
+    color: black;
   }
 
   #index .weather {
     padding: 1.5rem;
     font-size: 1.05rem;
+    background-color: #d8c4f0;
+    color: black;
   }
 
   #index .forecast-day {
     padding: 0.5rem;
     font-size: 1rem;
+    background-color: #d8c4f0;
+    color: black;
   }
 
   /* ============================= */
@@ -113,6 +154,8 @@
   #spotlight-cards .member-card {
     padding: 1.25rem;
     height: 100%;
+    background-color: #d8c4f0;
+    color: black;
   }
 
   #spotlight-cards .member-card img {
@@ -121,14 +164,17 @@
 
   #spotlight-cards .member-card h3 {
     font-size: 1.25rem;
+    color: black;
   }
 
   #spotlight-cards .member-card p {
     font-size: 1rem;
+    color: black;
   }
 
   #spotlight-cards .member-card a {
     font-size: 0.95rem;
+    color: black;
   }
 
   /* ============================= */
@@ -140,5 +186,17 @@
 
   .hero-box p, .welcome-card p {
     line-height: 1.6;
+  }
+
+  /* ============================= */
+  /* FOOTER */
+  /* ============================= */
+  footer {
+    background-color: #6b1f4f;
+    color: black;
+  }
+
+  footer hr {
+    border-color: black;
   }
 }
