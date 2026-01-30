@@ -2,7 +2,7 @@ const apiKey = "6ec2071e365d5c527d6c5356fc12c3aa";
 const lat = -32.8871;
 const lon = -68.8344;
 
-// ELEMENTOS HTML (LOS QUE YA TENÉS)
+// ELEMENTOS HTML
 const currentTempEl = document.getElementById("current-temp");
 const weatherDescEl = document.getElementById("weather-desc");
 const forecastEl = document.getElementById("forecast");
@@ -21,7 +21,7 @@ function formatDate(timestamp) {
 async function fetchWeather() {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=metric&lang=en&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=metric&lang=en&appid=${apiKey}`
     );
 
     if (!response.ok) throw new Error("Weather API error");
