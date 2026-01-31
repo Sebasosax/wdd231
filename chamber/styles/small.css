@@ -23,7 +23,7 @@ body::before {
   margin: auto;
   width: 200px;
   height: 200px;
-  background: url("images/chamber-logo.webp") no-repeat center / contain; /* corregido */
+  background: url("images/chamber-logo.webp") no-repeat center / contain; 
   opacity: 0.05;
   pointer-events: none;
   z-index: 0;
