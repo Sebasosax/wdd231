@@ -1,5 +1,5 @@
 // ---------------------- VARIABLES ----------------------
-const lat = -32.89018; // Mendoza
+const lat = -32.89018; 
 const lon = -68.84427;
 const appid = "6ec2071e365d5c527d6c5356fc12c3aa";
 
@@ -8,7 +8,7 @@ const currentTempEl = document.getElementById("current-temp");
 const weatherDescEl = document.getElementById("weather-desc");
 const forecastEl = document.getElementById("forecast");
 
-// ---------------------- EMOJIS ----------------------
+
 function getWeatherEmoji(desc) {
   desc = desc.toLowerCase();
   if (desc.includes("clear")) return "☀️";
@@ -20,16 +20,16 @@ function getWeatherEmoji(desc) {
   return "🌡️";
 }
 
-// ---------------------- FORMATEAR FECHA ----------------------
+
 function formatDate(dateStr) {
   const date = new Date(dateStr);
   return date.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
 }
 
-// ---------------------- FETCH WEATHER ----------------------
+
 async function fetchWeather() {
   try {
-    // 1️⃣ Clima actual
+    
     const currentResp = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${appid}`
     );
@@ -43,7 +43,7 @@ async function fetchWeather() {
     currentTempEl.textContent = `Temperature: ${temp}°C`;
     weatherDescEl.textContent = `${emoji} ${desc}`;
 
-    // 2️⃣ Forecast 3 días
+   
     const forecastResp = await fetch(
       `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${appid}`
     );
@@ -52,7 +52,7 @@ async function fetchWeather() {
 
     forecastEl.innerHTML = "";
 
-    // Tomar 1 pronóstico por día (ej: 12:00 PM)
+  
     const forecastByDay = {};
     forecastData.list.forEach(item => {
       const date = item.dt_txt.split(" ")[0];
@@ -62,7 +62,7 @@ async function fetchWeather() {
       }
     });
 
-    // Solo los próximos 3 días
+
     const days = Object.keys(forecastByDay).slice(0, 3);
     days.forEach(date => {
       const day = forecastByDay[date];
@@ -86,5 +86,5 @@ async function fetchWeather() {
   }
 }
 
-// ---------------------- EJECUTAR ----------------------
+
 fetchWeather();
