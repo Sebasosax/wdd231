@@ -198,3 +198,60 @@
     line-height: 1.6;
   }
 }
+/* ============================= */
+/* JOIN PAGE (LARGE VIEW) */
+/* ============================= */
+
+@media (min-width: 768px) {
+
+  .join-container {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+
+  .membership-cards {
+    gap: 1.5rem;
+  }
+
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  dialog {
+    max-width: 500px;
+  }
+}
+/* ============================= */
+/* THANK YOU PAGE STYLES - LARGE */
+/* ============================= */
+@media (min-width: 768px) {
+
+  #thankyou-page {
+    padding: 3rem 4rem;       
+    margin: 4rem auto;        
+  }
+
+  #thankyou-page h1 {
+    font-size: 2.5rem;        
+  }
+
+  #thankyou-page p {
+    font-size: 1.25rem;       
+  }
+
+  #submitted-info li {
+    font-size: 1.1rem;        
+    padding: 1rem 1.25rem;   
+  }
+
+  #thankyou-page .cta-button {
+    padding: 1rem 2rem;       
+    font-size: 1.15rem;       
+  }
+
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mendoza Chamber of Commerce | Thank You</title>
+  <meta name="description" content="Thank you for joining the Mendoza Chamber of Commerce">
+  <meta name="author" content="Juan Diego Sebastián Sosa">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/chamber-logo.webp">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <!-- JS -->
+  <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/chamber-logo.webp" alt="Mendoza Chamber Logo" class="header-logo">
+      <h2>Mendoza Chamber of Commerce</h2>
+      <nav>
+        <button id="menuToggle" class="hamburger" aria-label="Open navigation menu">&#9776;</button>
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="thankyou-page">
+    <h1>Thank You for Applying!</h1>
+    <p>We have received your application. Here is the information you submitted:</p>
+
+    <ul id="submitted-info">
+      <li>First Name: <span id="fname"></span></li>
+      <li>Last Name: <span id="lname"></span></li>
+      <li>Email: <span id="email"></span></li>
+      <li>Phone: <span id="phone"></span></li>
+      <li>Organization: <span id="organization"></span></li>
+      <li>Timestamp: <span id="timestamp"></span></li>
+    </ul>
+
+    <a href="join.html" class="cta-button">Return to Membership Form</a>
+  </main>
+
+  <footer>
+    <p>Mendoza Chamber of Commerce</p>
+    <hr>
+    <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

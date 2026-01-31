@@ -291,3 +291,237 @@ footer hr {
 #index .cta-button:hover {
   background-color: #5a1a42;
 }
+/* ============================= */
+/* JOIN PAGE */
+/* ============================= */
+
+#join {
+  padding: 1.5rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+#join h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Layout */
+.join-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* ============================= */
+/* FORM */
+/* ============================= */
+
+.join-form {
+  background-color: #d8c4f0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: grid;
+  gap: 1rem;
+  color: black;
+}
+
+.join-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  gap: 0.25rem;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #999;
+  font-family: inherit;
+}
+
+.join-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.join-form input[type="submit"] {
+  margin-top: 1rem;
+  background-color: #6b1f4f;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+.join-form input[type="submit"]:hover {
+  background-color: #5a1a42;
+}
+
+/* ============================= */
+/* MEMBERSHIP CARDS */
+/* ============================= */
+
+.membership-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #d8c4f0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: black;
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.card a {
+  font-weight: bold;
+  color: #6b1f4f;
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* ANIMATION (on load, not hover) */
+/* ============================= */
+
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.animate:nth-child(2) { animation-delay: 0.2s; }
+.animate:nth-child(3) { animation-delay: 0.4s; }
+.animate:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================= */
+/* MODALS */
+/* ============================= */
+
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 90%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+dialog::backdrop {
+  background: rgba(0,0,0,0.5);
+}
+
+dialog h3 {
+  margin-top: 0;
+}
+
+dialog ul {
+  padding-left: 1.2rem;
+}
+
+dialog button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #6b1f4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* ============================= */
+/* THANK YOU PAGE STYLES - SMALL */
+/* ============================= */
+
+#thankyou-page {
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  background-color: #f9f5ff; /* violeta muy claro */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease forwards;
+}
+
+#thankyou-page h1 {
+  font-size: 2rem;
+  color: #6b1f4f; /* vino oscuro */
+  margin-bottom: 1rem;
+}
+
+#thankyou-page p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+#submitted-info {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+#submitted-info li {
+  background-color: #d8c4f0; /* violeta claro */
+  margin: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: #333;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideUp 0.5s ease forwards;
+}
+
+#submitted-info li:nth-child(1) { animation-delay: 0.1s; }
+#submitted-info li:nth-child(2) { animation-delay: 0.2s; }
+#submitted-info li:nth-child(3) { animation-delay: 0.3s; }
+#submitted-info li:nth-child(4) { animation-delay: 0.4s; }
+#submitted-info li:nth-child(5) { animation-delay: 0.5s; }
+#submitted-info li:nth-child(6) { animation-delay: 0.6s; }
+
+#thankyou-page .cta-button {
+  background-color: #6b1f4f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#thankyou-page .cta-button:hover {
+  background-color: #5a1a42;
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
