@@ -1,47 +1,78 @@
-const apiKey = "6ec2071e365d5c527d6c5356fc12c3aa";
-const lat = -32.8871;
-const lon = -68.8344;
+// ---------------------- VARIABLES ----------------------
+const lat = -32.89018; // Mendoza
+const lon = -68.84427;
+const appid = "6ec2071e365d5c527d6c5356fc12c3aa";
 
 // ELEMENTOS HTML
 const currentTempEl = document.getElementById("current-temp");
 const weatherDescEl = document.getElementById("weather-desc");
 const forecastEl = document.getElementById("forecast");
 
-// FORMATEAR FECHA
-function formatDate(timestamp) {
-  const date = new Date(timestamp * 1000);
-  return date.toLocaleDateString("en-US", {
-    weekday: "short",
-    month: "short",
-    day: "numeric"
-  });
+// ---------------------- EMOJIS ----------------------
+function getWeatherEmoji(desc) {
+  desc = desc.toLowerCase();
+  if (desc.includes("clear")) return "☀️";
+  if (desc.includes("cloud")) return "☁️";
+  if (desc.includes("rain")) return "🌧️";
+  if (desc.includes("snow")) return "❄️";
+  if (desc.includes("storm") || desc.includes("thunder")) return "⛈️";
+  if (desc.includes("mist") || desc.includes("fog")) return "🌫️";
+  return "🌡️";
 }
 
-// FETCH WEATHER + FORECAST
+// ---------------------- FORMATEAR FECHA ----------------------
+function formatDate(dateStr) {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+}
+
+// ---------------------- FETCH WEATHER ----------------------
 async function fetchWeather() {
   try {
-    const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=metric&lang=en&appid=${apiKey}`
+    // 1️⃣ Clima actual
+    const currentResp = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${appid}`
     );
+    if (!currentResp.ok) throw new Error(`Weather API error: ${currentResp.status}`);
+    const currentData = await currentResp.json();
 
-    if (!response.ok) throw new Error("Weather API error");
+    const temp = currentData.main.temp.toFixed(1);
+    const desc = currentData.weather[0].description;
+    const emoji = getWeatherEmoji(desc);
 
-    const data = await response.json();
+    currentTempEl.textContent = `Temperature: ${temp}°C`;
+    weatherDescEl.textContent = `${emoji} ${desc}`;
 
-    // CLIMA ACTUAL
-    currentTempEl.textContent = `Temperature: ${data.current.temp.toFixed(1)}°C`;
-    weatherDescEl.textContent = `Condition: ${data.current.weather[0].description}`;
+    // 2️⃣ Forecast 3 días
+    const forecastResp = await fetch(
+      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${appid}`
+    );
+    if (!forecastResp.ok) throw new Error(`Forecast API error: ${forecastResp.status}`);
+    const forecastData = await forecastResp.json();
 
-    // FORECAST (PRÓXIMOS 3 DÍAS)
     forecastEl.innerHTML = "";
 
-    data.daily.slice(1, 4).forEach(day => {
+    // Tomar 1 pronóstico por día (ej: 12:00 PM)
+    const forecastByDay = {};
+    forecastData.list.forEach(item => {
+      const date = item.dt_txt.split(" ")[0];
+      const hour = item.dt_txt.split(" ")[1];
+      if (!forecastByDay[date] && hour === "12:00:00") {
+        forecastByDay[date] = item;
+      }
+    });
+
+    // Solo los próximos 3 días
+    const days = Object.keys(forecastByDay).slice(0, 3);
+    days.forEach(date => {
+      const day = forecastByDay[date];
       const dayDiv = document.createElement("div");
       dayDiv.classList.add("forecast-day");
 
+      const dayEmoji = getWeatherEmoji(day.weather[0].description);
       dayDiv.innerHTML = `
-        <strong>${formatDate(day.dt)}</strong><br>
-        ${day.temp.day.toFixed(1)}°C – ${day.weather[0].description}
+        <strong>${formatDate(day.dt_txt)}</strong><br>
+        ${dayEmoji} ${day.main.temp.toFixed(1)}°C – ${day.weather[0].description}
       `;
 
       forecastEl.appendChild(dayDiv);
@@ -55,4 +86,5 @@ async function fetchWeather() {
   }
 }
 
+// ---------------------- EJECUTAR ----------------------
 fetchWeather();
