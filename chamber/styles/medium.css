@@ -1,0 +1,22 @@
+/* ============================= */
+/* DISCOVER PAGE - MEDIUM SCREENS */
+/* ============================= */
+
+@media (min-width: 641px) {
+
+  .discover-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .discover-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .discover-card p {
+    font-size: 1rem;
+  }
+
+  .discover-card img {
+    height: 220px;
+  }
+}

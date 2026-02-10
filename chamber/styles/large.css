@@ -255,3 +255,42 @@
   }
 
 }
+/* ============================= */
+/* DISCOVER PAGE - LARGE SCREENS */
+/* ============================= */
+
+@media (min-width: 1025px) {
+
+  .discover-container {
+    max-width: 1200px;
+    padding: 2rem;
+  }
+
+  .discover-cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .discover-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .discover-card p {
+    font-size: 1.05rem;
+  }
+
+  .discover-card img {
+    height: 200px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Hover effect ONLY on desktop */
+  .discover-card img:hover {
+    transform: scale(1.05);
+  }
+
+  .discover-card button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}

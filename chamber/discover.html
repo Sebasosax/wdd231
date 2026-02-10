@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Chamber of Commerce Directory | Mendoza</title>
-  <meta name="description" content="Mendoza Chamber of Commerce member directory">
+  <title>Mendoza Chamber of Commerce | Discover</title>
+  <meta name="description" content="Discover places of interest in Mendoza promoted by the Chamber of Commerce">
   <meta name="author" content="Juan Diego Sebastián Sosa">
 
   <!-- Favicon -->
@@ -20,16 +20,17 @@
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/medium.css">
 
   <!-- JS -->
-  <script src="scripts/directory.js" defer></script>
   <script src="scripts/main.js" defer></script>
+  <script type="module" src="scripts/discover.js"></script>
 
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Mendoza Chamber of Commerce | Directory">
-  <meta property="og:description" content="Mendoza Chamber of Commerce member directory – Connect with local businesses">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mendoza Chamber of Commerce | Discover">
+  <meta property="og:description" content="Explore attractions and points of interest in Mendoza">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sebasosax.github.io/wdd231/chamber/directory.html">
+  <meta property="og:url" content="https://sebasosax.github.io/wdd231/chamber/discover.html">
   <meta property="og:image" content="https://sebasosax.github.io/wdd231/chamber/images/chamber-logo.webp">
 </head>
 
@@ -44,34 +45,24 @@
       <button id="menuToggle" class="hamburger" aria-label="Open navigation menu">&#9776;</button>
       <ul id="navMenu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Contact</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        
+        <li><a href="discover.html" class="active">Discover</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<!-- HERO TEXTUAL -->
-<section class="hero-textual">
-  <div class="hero-box">
-    <h1>Connecting Businesses Across Mendoza</h1>
-    <p>We unite local businesses to grow together and support the community</p>
-  </div>
-</section>
+<main class="discover-grid">
 
-<main>
-  <h2>Mendoza Chamber Directory</h2>
+  <!-- Visit message (localStorage) -->
+  <section id="visit-message" class="visit-message"></section>
 
-  <div class="view-buttons">
-    <button id="gridView">Grid View</button>
-    <button id="listView">List View</button>
-  </div>
-
-  <section id="members" class="grid-view">
-    <!-- Members loaded via JS -->
+  <!-- Cards container -->
+  <section class="discover-cards">
+    <!-- 8 cards generated dynamically with JavaScript -->
   </section>
+
 </main>
 
 <footer>
