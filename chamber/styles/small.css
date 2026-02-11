@@ -554,20 +554,21 @@ dialog button {
 .discover-card {
   background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* TITLES DARK BLACK */
+/* Titles */
 .discover-card h2 {
   margin: 1rem 1rem 0.5rem;
   color: #111111; /* negro oscuro */
   font-size: 1.2rem;
 }
 
+/* Image */
 .discover-card figure {
   margin: 0;
   overflow: hidden;
@@ -577,8 +578,10 @@ dialog button {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
+/* Address & Description */
 .discover-card .discover-address {
   font-style: italic;
   font-size: 0.9rem;
@@ -592,7 +595,7 @@ dialog button {
   color: #333;
 }
 
-/* BUTTON VIOLET */
+/* Buttons */
 .discover-card button {
   margin: 0 1rem 1rem;
   padding: 0.5rem 1rem;
@@ -605,11 +608,12 @@ dialog button {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* BUTTON HOVER RED */
 .discover-card button:hover {
   background-color: #8b0000; /* rojo */
   transform: scale(1.05);
 }
+
+/* H1 */
 .discover-grid h1 {
   text-align: center;
   font-family: 'Outfit', sans-serif;

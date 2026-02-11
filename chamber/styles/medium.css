@@ -3,9 +3,9 @@
 /* ============================= */
 
 @media (min-width: 641px) {
-
   .discover-cards {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   .discover-card h2 {
@@ -18,10 +18,5 @@
 
   .discover-card img {
     height: 220px;
-  }
-}
-@media (min-width: 641px) {
-  .discover-grid h1 {
-    font-size: 2.4rem;
   }
 }

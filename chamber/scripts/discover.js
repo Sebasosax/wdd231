@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const img = document.createElement('img');
     img.src = item.image;
     img.alt = item.name;
-    img.loading = "lazy"; // ✅ Required for lazy loading
+    img.loading = "lazy"; 
     figure.appendChild(img);
     card.appendChild(figure);
 

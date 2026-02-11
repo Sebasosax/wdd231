@@ -259,7 +259,6 @@
 /* DISCOVER PAGE - LARGE SCREENS */
 /* ============================= */
 @media (min-width: 1025px) {
-
   .discover-container {
     max-width: 1200px;
     padding: 2rem;
@@ -280,10 +279,9 @@
 
   .discover-card img {
     height: 200px;
-    transition: transform 0.3s ease;
   }
 
- 
+  /* Hover effect on desktop images */
   .discover-card img:hover {
     transform: scale(1.05);
   }
@@ -291,10 +289,5 @@
   .discover-card button {
     padding: 0.6rem 1.2rem;
     font-size: 1rem;
-  }
-}
-@media (min-width: 641px) {
-  .discover-grid h1 {
-    font-size: 2.4rem;
   }
 }
