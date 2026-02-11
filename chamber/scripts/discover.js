@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===============================
   // CONTAINERS
   // ===============================
-  const visitMessage = document.getElementById('visit-message'); // for localStorage message
-  const cardsContainer = document.querySelector('.discover-cards'); // for the cards
+  const visitMessage = document.getElementById('visit-message');
+  const cardsContainer = document.querySelector('.discover-cards');
 
   // ===============================
   // VISIT MESSAGE USING LOCALSTORAGE
@@ -16,15 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const now = Date.now();
 
   if (!lastVisit) {
-    visitMessage.textContent = "Welcome! If you have any questions, let us know.";
+    visitMessage.textContent =
+      "Welcome! If you have any questions, let us know.";
   } else {
-    const diffDays = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+    const diffDays = Math.floor(
+      (now - Number(lastVisit)) / (1000 * 60 * 60 * 24)
+    );
+
     if (diffDays === 0) {
-      visitMessage.textContent = "Back soon! Great!";
+      visitMessage.textContent = "Back so soon! Awesome!";
     } else if (diffDays === 1) {
       visitMessage.textContent = "Your last visit was 1 day ago.";
     } else {
-      visitMessage.textContent = `Your last visit was ${diffDays} days ago.`;
+      visitMessage.textContent =
+        `Your last visit was ${diffDays} days ago.`;
     }
   }
 
@@ -32,9 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
   localStorage.setItem('lastVisit', now);
 
   // ===============================
-  // CREATE CARDS FOR POINTS OF INTEREST
+  // CREATE CARDS FROM JSON DATA
   // ===============================
   places.forEach(item => {
+
     const card = document.createElement('div');
     card.classList.add('discover-card');
 
@@ -48,28 +54,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const img = document.createElement('img');
     img.src = item.image;
     img.alt = item.name;
+    img.loading = "lazy"; // ✅ Required for lazy loading
     figure.appendChild(img);
     card.appendChild(figure);
 
     // Address
     const address = document.createElement('address');
+    address.classList.add('discover-address');
     address.textContent = item.address;
     card.appendChild(address);
 
     // Description
-    const p = document.createElement('p');
-    p.textContent = item.description;
-    card.appendChild(p);
+    const description = document.createElement('p');
+    description.textContent = item.description;
+    card.appendChild(description);
 
     // Button
-    const btn = document.createElement('button');
-    btn.textContent = 'Learn More';
-    btn.addEventListener('click', () => {
+    const button = document.createElement('button');
+    button.textContent = "Learn More";
+    button.addEventListener('click', () => {
       alert(`More information about: ${item.name}`);
     });
-    card.appendChild(btn);
+    card.appendChild(button);
 
-    // Add card to container
+    // Append card
     cardsContainer.appendChild(card);
   });
 

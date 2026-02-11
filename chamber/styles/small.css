@@ -561,9 +561,10 @@ dialog button {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* TITLES DARK BLACK */
 .discover-card h2 {
   margin: 1rem 1rem 0.5rem;
-  color: #8b0000;
+  color: #111111; /* negro oscuro */
   font-size: 1.2rem;
 }
 
@@ -591,10 +592,11 @@ dialog button {
   color: #333;
 }
 
+/* BUTTON VIOLET */
 .discover-card button {
   margin: 0 1rem 1rem;
   padding: 0.5rem 1rem;
-  background-color: #8b0000;
+  background-color: #5a1a42; /* violeta */
   color: white;
   border: none;
   border-radius: 6px;
@@ -603,7 +605,28 @@ dialog button {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* BUTTON HOVER RED */
 .discover-card button:hover {
-  background-color: #5a1a42;
+  background-color: #8b0000; /* rojo */
   transform: scale(1.05);
+}
+.discover-grid h1 {
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+  margin: 1.5rem 0 2rem 0;
+  padding-bottom: 0.5rem;
+  color: #111; /* negro oscuro como pediste */
+  position: relative;
+}
+
+/* Decorative underline */
+.discover-grid h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #5a1a42; /* violeta */
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
