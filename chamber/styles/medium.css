@@ -20,6 +20,8 @@
     height: 220px;
   }
 }
-.discover-grid h1 {
-  font-size: 2.4rem;
+@media (min-width: 641px) {
+  .discover-grid h1 {
+    font-size: 2.4rem;
+  }
 }

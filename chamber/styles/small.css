@@ -614,19 +614,18 @@ dialog button {
   text-align: center;
   font-family: 'Outfit', sans-serif;
   font-size: 2rem;
-  margin: 1.5rem 0 2rem 0;
+  margin: 1.5rem 0 2rem;
   padding-bottom: 0.5rem;
-  color: #111; /* negro oscuro como pediste */
+  color: #111;
   position: relative;
 }
 
-/* Decorative underline */
 .discover-grid h1::after {
   content: "";
   display: block;
   width: 60px;
   height: 4px;
-  background-color: #5a1a42; /* violeta */
+  background-color: #5a1a42;
   margin: 0.5rem auto 0;
   border-radius: 2px;
 }
