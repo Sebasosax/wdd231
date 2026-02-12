@@ -1,0 +1,68 @@
+{
+  "resources": [
+    {
+      "type": "Hospital",
+      "name": "University of Utah Hospital",
+      "email": "info@utahhospital.org",
+      "phone": "801-581-2121",
+      "location": "50 N Medical Dr, Salt Lake City, UT",
+      "image": "images/University-Hospital.webp"
+    },
+    {
+      "type": "Hospital",
+      "name": "Intermountain Medical Center",
+      "email": "contact@imc.org",
+      "phone": "801-507-7000",
+      "location": "5121 S Cottonwood St, Murray, UT",
+      "image": "images/Intermountain-Medical.webp"
+    },
+    {
+      "type": "Nutrition Clinic",
+      "name": "Salt Lake Nutrition Care",
+      "email": "support@slnutrition.com",
+      "phone": "801-555-2345",
+      "location": "123 Wellness Ave, Salt Lake City, UT",
+      "image": "images/Nutrition-Care.webp"
+    },
+    {
+      "type": "Nutrition Clinic",
+      "name": "Healthy Living Diet Center",
+      "email": "info@healthyliving.com",
+      "phone": "801-555-6789",
+      "location": "456 Healthy Way, West Valley City, UT",
+      "image": "images/Healthy-Diet.webp"
+    },
+    {
+      "type": "Financial Assistance",
+      "name": "Utah Diabetes Assistance Program",
+      "email": "help@utahdiabetes.org",
+      "phone": "801-555-1122",
+      "location": "789 Support Blvd, Salt Lake City, UT",
+      "image": "images/Diabetes-Assistance.webp"
+    },
+    {
+      "type": "Financial Assistance",
+      "name": "Insulin Support Foundation",
+      "email": "aid@insulinsupport.org",
+      "phone": "801-555-3344",
+      "location": "321 Care Street, Provo, UT",
+      "image": "images/Insulin-Foundation.webp"
+    },
+    {
+      "type": "Support Group",
+      "name": "Salt Lake Diabetes Support Group",
+      "email": "community@sldsupport.org",
+      "phone": "801-555-8899",
+      "location": "654 Community Center Dr, Salt Lake City, UT",
+      "image": "images/Diabetes-Group.webp"
+    },
+    {
+      "type": "Community Education",
+      "name": "Utah Health Education Center",
+      "email": "education@utahhealth.org",
+      "phone": "801-555-7766",
+      "location": "987 Knowledge Rd, Ogden, UT",
+      "image": "images/Health-Education-Center.webp"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Salt Lake Diabetes Community - Education, support, and resources for people living with diabetes.">
+    <title>Resources | Salt Lake Diabetes Community</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Salt Lake Diabetes Community">
+    <meta property="og:description" content="Education, support, and resources for people living with diabetes in Salt Lake City.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sebasosax.github.io/wdd231/diabetes/resources.html">
+    <meta property="og:image" content="https://sebasosax.github.io/wdd231/diabetes/images/logo.webp">
+
+    <!-- JS -->
+    <script src="scripts/resources.js" defer></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container nav-container">
+        <div class="logo">
+            <img src="images/logo.webp" alt="Salt Lake Diabetes Community Logo" class="logo-img">
+            <span>Salt Lake Diabetes</span>
+        </div>
+
+        <nav aria-label="Main Navigation">
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="understanding.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html" aria-current="page">Resources</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- MAIN -->
+<main id="resources-page" class="container">
+    <section class="resources-section">
+        <h1>Community Resources</h1>
+
+        <!-- View Buttons -->
+        <div class="view-buttons">
+            <button id="gridBtn" type="button">Grid View</button>
+            <button id="listBtn" type="button">List View</button>
+        </div>
+
+        <!-- Cards Container -->
+        <div id="cards-container" class="cards-grid"></div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-grid">
+
+        <div class="social-links">
+            <p>Follow Us</p>
+            <div class="icons">
+                <a href="https://www.facebook.com/SaltLakeDiabetes" target="_blank" aria-label="Facebook">
+                    <img src="images/facebook.webp" alt="Facebook Icon">
+                </a>
+                <a href="https://www.instagram.com/SaltLakeDiabetes" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram.webp" alt="Instagram Icon">
+                </a>                
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <p>Salt Lake City, Utah</p>
+            <p>&copy; 2026 Salt Lake Diabetes Community</p>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
