@@ -4,33 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sebastián Sosa">
-    <meta name="description" content="Salt Lake Diabetes Community - Education, support, and trusted resources for people living with diabetes in Salt Lake City, Utah.">
-    <title>Salt Lake Diabetes Community | Home</title>
+    <meta name="description" content="Salt Lake Diabetes Community Contact Page">
+    <title>Contact | Salt Lake Diabetes Community</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.png" type="image/png">
-
     <!-- CSS -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Salt Lake Diabetes Community">
-    <meta property="og:description" content="Education, support, and trusted resources for people living with diabetes in Salt Lake City.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sebasosax.github.io/wdd231/Final/index.html">
-    <meta property="og:image" content="https://sebasosax.github.io/wdd231/Final/images/logo.webp">
-
     <!-- JS -->
-    <script type="module" src="scripts/spotlight.js" defer></script>
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
 </head>
-
 <body>
 
 <header>
@@ -51,6 +39,69 @@
     </div>
 </header>
 
+<main class="container">
+
+    <section class="contact-section">
+        <div class="container">
+
+            <!-- Información de contacto -->
+            <div class="info-box">
+                <h2>Contact Information</h2>
+                <p>
+                    Reach out to Salt Lake Diabetes Community. We're here to support you!
+                </p>
+                <ul class="contact-info">
+                    <li><span class="contact-icon">📧</span> info@saltlakediabetes.org</li>
+                    <li><span class="contact-icon">📞</span> (801) 555-1234</li>
+                    <li><span class="contact-icon">📍</span> Salt Lake City, Utah</li>
+                </ul>
+            </div>
+
+            <!-- Formulario de contacto -->
+            <div class="form-box">
+                <h2>Request More Information</h2>
+                <form action="#" method="post" class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+
+                    <label for="message">Message / Comments:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+
+                    <label>Do you have diabetes?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="diabetes-yes" name="has_diabetes" value="yes" required>
+                        <label for="diabetes-yes">Yes</label>
+
+                        <input type="radio" id="diabetes-no" name="has_diabetes" value="no">
+                        <label for="diabetes-no">No</label>
+                    </div>
+
+                    <div id="diabetes-type-container" style="display:none;">
+                        <label for="diabetes-type">If yes, what type?</label>
+                        <select id="diabetes-type" name="diabetes_type">
+                            <option value="">Select type</option>
+                            <option value="type1">Type 1</option>
+                            <option value="type2">Type 2</option>
+                            <option value="gestational">Gestational</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
 <footer>
     <div class="container footer-grid">
 
@@ -62,7 +113,7 @@
                 </a>
                 <a href="https://www.instagram.com/SaltLakeDiabetes" target="_blank" aria-label="Instagram">
                     <img src="images/instagram.webp" alt="Instagram Icon">
-                </a>                
+                </a>
             </div>
         </div>
 

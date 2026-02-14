@@ -122,4 +122,50 @@
         max-width: 900px;
     }
 }
+/* ============================= */
+/* CONTACT.HTML SECTION DESKTOP */
+/* ============================= */
+@media (min-width: 768px) {
+
+    .contact-section .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .info-box, .form-box {
+        flex: 1;
+        max-width: 48%;
+    }
+
+    .radio-group {
+        justify-content: flex-start;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #diabetes-type-container {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    .contact-section .container {
+        gap: 3rem;
+    }
+
+    .info-box, .form-box {
+        padding: 3rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        font-size: 1.1rem;
+    }
+}
 
