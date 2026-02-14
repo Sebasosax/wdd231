@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sebastián Sosa">
-    <meta name="description" content="Salt Lake Diabetes Community - Education, support, and resources for people living with diabetes.">
-    <title>Resources | Salt Lake Diabetes Community</title>
+    <meta name="description" content="Salt Lake Diabetes Community - Education, support, and trusted resources for people living with diabetes in Salt Lake City, Utah.">
+    <title>Salt Lake Diabetes Community | Home</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,31 +13,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <link rel="icon" href="favicon.png" type="image/png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 
-    <!-- Open Graph / Social Sharing -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Salt Lake Diabetes Community">
-    <meta property="og:description" content="Education, support, and resources for people living with diabetes in Salt Lake City.">
+    <meta property="og:description" content="Education, support, and trusted resources for people living with diabetes in Salt Lake City.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sebasosax.github.io/wdd231/diabetes/resources.html">
-    <meta property="og:image" content="https://sebasosax.github.io/wdd231/diabetes/images/logo.webp">
+    <meta property="og:url" content="https://sebasosax.github.io/wdd231/Final/index.html">
+    <meta property="og:image" content="https://sebasosax.github.io/wdd231/Final/images/logo.webp">
 
     <!-- JS -->
-    <script src="scripts/resources.js" defer></script>
+    <script type="module" src="scripts/spotlight.js" defer></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="container nav-container">
         <div class="logo">
-            <img src="images/logo.webp" alt="Salt Lake Diabetes Community Logo" class="logo-img">
+            <img src="images/logo.webp" alt="Salt Lake Diabetes Community Logo" class="logo-img" loading="lazy">
             <span>Salt Lake Diabetes</span>
         </div>
 
@@ -45,29 +44,13 @@
             <ul class="main-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="understanding.html">Education</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="resources.html" aria-current="page">Resources</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<!-- MAIN -->
-<main id="resources-page" class="container">
-    <section class="resources-section">
-        <h1>Community Resources</h1>
-
-        <!-- View Buttons -->
-        <div class="view-buttons">
-            <button id="gridBtn" type="button">Grid View</button>
-            <button id="listBtn" type="button">List View</button>
-        </div>
-
-        <!-- Cards Container -->
-        <div id="cards-container" class="cards-grid"></div>
-</main>
-
-<!-- FOOTER -->
 <footer>
     <div class="container footer-grid">
 

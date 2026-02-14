@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Salt Lake Diabetes Community - Education, support, and resources for people living with diabetes.">
-    <title>Salt Lake Diabetes Community</title>
+    <meta name="author" content="Sebastián Sosa">
+    <meta name="description" content="Salt Lake Diabetes Community - Education, support, and trusted resources for people living with diabetes in Salt Lake City, Utah.">
+    <title>Salt Lake Diabetes Community | Home</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,23 +19,24 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 
-    <!-- Open Graph / Social Sharing -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Salt Lake Diabetes Community">
-    <meta property="og:description" content="Education, support, and resources for people living with diabetes in Salt Lake City.">
+    <meta property="og:description" content="Education, support, and trusted resources for people living with diabetes in Salt Lake City.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sebasosax.github.io/wdd231/diabetes/index.html">
-    <meta property="og:image" content="https://sebasosax.github.io/wdd231/diabetes/images/logo.webp">
+    <meta property="og:url" content="https://sebasosax.github.io/wdd231/Final/index.html">
+    <meta property="og:image" content="https://sebasosax.github.io/wdd231/Final/images/logo.webp">
 
     <!-- JS -->
-    <script src="scripts/resources.js" defer></script>
+    <script type="module" src="scripts/spotlight.js" defer></script>
+    <script src="scripts/main.js" defer></script>
 </head>
+
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="container nav-container">
         <div class="logo">
-            <img src="images/logo.webp" alt="Salt Lake Diabetes Community Logo" class="logo-img">
+            <img src="images/logo.webp" alt="Salt Lake Diabetes Community Logo" class="logo-img" loading="lazy">
             <span>Salt Lake Diabetes</span>
         </div>
 
@@ -49,7 +51,6 @@
     </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
     <div class="container">
         <h1>Salt Lake Diabetes Community</h1>
@@ -59,13 +60,12 @@
     </div>
 </section>
 
-<!-- MAIN CONTENT -->
 <main class="container">
 
-    <!-- Section 1: Education -->
+    <!-- Education -->
     <section class="content-row">
         <div class="image-box">
-            <img src="images/Understanding-Diabetes.webp" alt="Doctor explaining diabetes to a patient">
+            <img src="images/Understanding-Diabetes.webp" alt="Doctor explaining diabetes to a patient" loading="lazy">
         </div>
         <div class="text-box">
             <h2>Education</h2>
@@ -77,10 +77,10 @@
         </div>
     </section>
 
-    <!-- Section 2: Management -->
+    <!-- Management -->
     <section class="content-row reverse">
         <div class="image-box">
-            <img src="images/ManagingDiabetes.webp" alt="Person checking blood sugar level">
+            <img src="images/ManagingDiabetes.webp" alt="Person checking blood sugar level" loading="lazy">
         </div>
         <div class="text-box">
             <h2>Management</h2>
@@ -92,10 +92,10 @@
         </div>
     </section>
 
-    <!-- Section 3: Nutrition -->
+    <!-- Nutrition -->
     <section class="content-row">
         <div class="image-box">
-            <img src="images/Nutrition&Lifestyle.webp" alt="Healthy food for diabetes diet">
+            <img src="images/Nutrition&Lifestyle.webp" alt="Healthy food for diabetes diet" loading="lazy">
         </div>
         <div class="text-box">
             <h2>Nutrition</h2>
@@ -107,31 +107,39 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <h2>Contact</h2>
-        <p>
-            Have questions? Our community is here to help.
-        </p>
-        <a href="contact.html" class="btn">Get in Touch</a>
+    <!-- Spotlight Resources -->
+    <section class="resources-section">
+        <h2>Featured Resources</h2>
+
+        <!-- Contenedor dinámico para spotlight -->
+        <div id="spotlightContainer" class="spotlight-grid"></div>
     </section>
 
-    <!-- Resources Section -->
-    <section class="resources-section">
-        <h2>Resources</h2>
-        <div class="resources-grid">
-            <div class="res-item">ADA</div>
-            <div class="res-item">CDC</div>
-            <div class="res-item">Local Clinics</div>
-            <div class="res-item">Support Groups</div>
-            <div class="res-item">Nutrition Guides</div>
+    <!-- Contact -->
+    <section class="contact-section">
+       <h2>Contact</h2>
+       <div class="contact-box">
+            <p>Have questions or need support? Reach out to our community!</p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <img src="images/gmail.webp" alt="Email Icon">
+                    <a href="mailto:info@saltlakediabetes.org">info@saltlakediabetes.org</a>
+                </div>
+                <div class="contact-item">
+                    <img src="images/phone-icon.webp" alt="Phone Icon">
+                    <a href="tel:8015551234">(801) 555-1234</a>
+                </div>
+                <div class="contact-item">
+                    <img src="images/location-icon.webp" alt="Location Icon">
+                    <span>Salt Lake City, Utah</span>
+                </div>
+            </div>
+            <a href="contact.html" class="btn">Get in Touch</a>
         </div>
-        <a href="resources.html" class="more-info">View All Resources</a>
     </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer>
     <div class="container footer-grid">
 
@@ -143,8 +151,7 @@
                 </a>
                 <a href="https://www.instagram.com/SaltLakeDiabetes" target="_blank" aria-label="Instagram">
                     <img src="images/instagram.webp" alt="Instagram Icon">
-                </a>
-
+                </a>                
             </div>
         </div>
 
