@@ -460,7 +460,10 @@ footer::before {
     background-color: #a81b00;
 }
 
-
+#diabetes-type-container {
+    display: none; /* oculto por defecto */
+    margin-top: 10px;
+}
 /* ============================= */
 /* THANK YOU PAGE - SMALL CSS */
 /* ============================= */
