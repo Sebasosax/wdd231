@@ -32,6 +32,7 @@
     <meta property="og:image" content="https://sebasosax.github.io/wdd231/Final/images/logo.webp">
 
     <!-- JS -->
+    <script src ="scripts/main.js" defer></script>
     <script src="scripts/thankyou.js" defer></script>
 </head>
 <body>
@@ -43,12 +44,18 @@
             <span>Salt Lake Diabetes</span>
         </div>
 
-        <nav aria-label="Main Navigation">
+        <div class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="main-navigation" aria-label="Main Navigation">
             <ul class="main-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="understanding.html">Education</a></li>
                 <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </div>

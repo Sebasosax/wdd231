@@ -32,6 +32,7 @@
     <meta property="og:image" content="https://sebasosax.github.io/wdd231/Final/images/logo.webp">
 
     <!-- JS -->
+    <script src="scripts/main.js" defer></script>
     <script src="scripts/resources.js" defer></script>
 </head>
 
@@ -40,21 +41,26 @@
 <header>
     <div class="container nav-container">
         <div class="logo">
-            <img src="images/logo.webp" alt="Salt Lake Diabetes Community Logo" class="logo-img">
+            <img src="images/logo.webp" alt="Salt Lake Diabetes Community Logo" class="logo-img" loading="lazy">
             <span>Salt Lake Diabetes</span>
         </div>
 
-        <nav aria-label="Main Navigation">
+        <div class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="main-navigation" aria-label="Main Navigation">
             <ul class="main-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="understanding.html">Education</a></li>
-                <li><a href="resources.html" aria-current="page">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
-
 <main id="resources-page" class="container">
     <section class="resources-section">
         <h1>Community Resources</h1>
