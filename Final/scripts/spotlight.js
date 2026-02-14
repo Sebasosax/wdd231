@@ -1,14 +1,12 @@
-// scripts/spotlight.js
 const container = document.querySelector('#spotlightContainer');
 
 if (container) {
     let resourcesData = [];
     let currentIndex = 0;
 
-    // Cargar recursos desde JSON
     async function loadResources() {
         try {
-            const response = await fetch('data/resources.json'); // asegúrate que la ruta sea correcta
+            const response = await fetch('data/resources.json');
             const data = await response.json();
             resourcesData = data.resources;
 
@@ -20,7 +18,6 @@ if (container) {
         }
     }
 
-    // Mostrar 4 recursos a la vez
     function displaySpotlight() {
         container.innerHTML = '';
 
@@ -29,29 +26,25 @@ if (container) {
             const item = resourcesData[index];
 
             const card = document.createElement('article');
-            card.classList.add('spotlight-card');
+            card.classList.add('resource-card'); // 🔥 CORRECTO
 
-            // Diferenciar links externos (Hospitals) e internos (Local Clinics)
-            let link = "resources.html"; 
+            let link = "resources.html";
             if (item.type === "Hospital" || item.type === "Nutrition Clinic") {
-                link = "#"; // reemplazar con link real si hay
+                link = "#";
             }
 
             card.innerHTML = `
                 <img src="${item.image}" alt="${item.name}" loading="lazy">
-                <div class="spotlight-content">
-                    <h3>${item.name}</h3>
-                    <p>${item.type}</p>
-                    <p>${item.location}</p>
-                    <a href="${link}" class="btn-small">More Info</a>
-                </div>
+                <h3>${item.name}</h3>
+                <p>${item.type}</p>
+                <p>${item.location}</p>
+                <a href="${link}" class="btn">More Info</a>
             `;
 
             container.appendChild(card);
         }
     }
 
-    // Rotación automática cada 5 segundos
     function startRotation() {
         setInterval(() => {
             currentIndex = (currentIndex + 4) % resourcesData.length;

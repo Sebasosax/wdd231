@@ -1,19 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Elementos del formulario
     const yesRadio = document.getElementById('diabetes-yes');
     const noRadio = document.getElementById('diabetes-no');
     const typeContainer = document.getElementById('diabetes-type-container');
-
-    // Mostrar/ocultar selector de tipo de diabetes
-    yesRadio.addEventListener('change', () => {
-        typeContainer.style.display = 'block';
-    });
-
-    noRadio.addEventListener('change', () => {
-        typeContainer.style.display = 'none';
-    });
-
-    // Capturar el formulario y enviar datos a thankyou.html
     const form = document.querySelector('.contact-form');
+
+    // Función para mostrar/ocultar selector de tipo de diabetes
+    function toggleDiabetesType() {
+        if (yesRadio.checked) {
+            typeContainer.classList.add('show');
+        } else {
+            typeContainer.classList.remove('show');
+        }
+    }
+
+    // Eventos de cambio de radio buttons
+    yesRadio.addEventListener('change', toggleDiabetesType);
+    noRadio.addEventListener('change', toggleDiabetesType);
+
+    // Inicializar estado correcto al cargar la página
+    toggleDiabetesType();
+
+    // Capturar envío del formulario
     form.addEventListener('submit', (e) => {
         e.preventDefault(); // evitar recarga de página
 
