@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sebastián Sosa">
-    <meta name="description" content="Salt Lake Diabetes Community Contact Page">
+    
+    <!-- Meta description optimizada -->
+    <meta name="description" content="Contact the Salt Lake Diabetes Community for support, resources, and guidance for people living with diabetes in Salt Lake City, Utah.">
+    
     <title>Contact | Salt Lake Diabetes Community</title>
 
     <!-- Google Fonts -->
@@ -17,8 +20,16 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Salt Lake Diabetes Community">
+    <meta property="og:description" content="Reach out to the Salt Lake Diabetes Community for support, guidance, and trusted diabetes resources in Salt Lake City, Utah.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sebasosax.github.io/wdd231/Final/contact.html">
+    <meta property="og:image" content="https://sebasosax.github.io/wdd231/Final/images/logo.webp">
 
     <!-- JS -->
     <script src="scripts/contact.js" defer></script>
@@ -44,6 +55,8 @@
 </header>
 
 <main class="container">
+    <!-- H1 único de la página -->
+    <h1>Contact Salt Lake Diabetes Community</h1>
 
     <section class="contact-section">
         <div class="container">
@@ -86,7 +99,8 @@
                         <label for="diabetes-no">No</label>
                     </div>
 
-                    <div id="diabetes-type-container" style="display:none;">
+                    <!-- Div oculto, ahora usando clase CSS -->
+                    <div id="diabetes-type-container" class="hidden">
                         <label for="diabetes-type">If yes, what type?</label>
                         <select id="diabetes-type" name="diabetes_type">
                             <option value="">Select type</option>
@@ -103,7 +117,6 @@
 
         </div>
     </section>
-
 </main>
 
 <footer>
