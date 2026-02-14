@@ -514,52 +514,37 @@ footer::before {
 #submittedData li:last-child {
     border-bottom: none;
 }
-/* ============================= */
-/* HAMBURGER MENU (MOBILE) */
-/* ============================= */
+
+/* ----------------- */
+/* HAMBURGUESA */
+/* ----------------- */
 .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
+    justify-content: space-between;
+    width: 28px;
+    height: 22px;
     cursor: pointer;
 }
 
 .hamburger span {
     display: block;
     height: 3px;
-    background-color: var(--light);
+    background-color: var(--primary); 
     border-radius: 2px;
-    transition: all 0.3s ease;
 }
 
-.nav-open .main-nav {
-    display: flex;
+/* MENÚ MÓVIL */
+nav ul.main-nav {
+    display: none;
     flex-direction: column;
     gap: 12px;
     margin-top: 1rem;
+    text-align: center;
 }
 
-@media (max-width: 767px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .main-nav {
-        display: none; 
-        text-align: center;
-    }
-
-    .nav-open .hamburger span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .nav-open .hamburger span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-open .hamburger span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
+/* Cuando hamburguesa activa */
+nav ul.main-nav.show {
+    display: flex;
 }
+
