@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sebastián Sosa">
-    
+
     <!-- Meta description optimizada -->
-    <meta name="description" content="Contact the Salt Lake Diabetes Community for support, resources, and guidance for people living with diabetes in Salt Lake City, Utah.">
-    
+    <meta name="description" content="Contact the Salt Lake Diabetes Community for support, resources, and educational guidance for people living with diabetes in Salt Lake City, Utah.">
+
     <title>Contact | Salt Lake Diabetes Community</title>
 
     <!-- Google Fonts -->
@@ -15,18 +15,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <!-- Favicon (ruta absoluta para GitHub Pages) -->
+    <link rel="icon" href="https://sebasosax.github.io/wdd231/Final/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://sebasosax.github.io/wdd231/Final/favicon.png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Contact Salt Lake Diabetes Community">
-    <meta property="og:description" content="Reach out to the Salt Lake Diabetes Community for support, guidance, and trusted diabetes resources in Salt Lake City, Utah.">
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Contact | Salt Lake Diabetes Community">
+    <meta property="og:description" content="Get in touch with the Salt Lake Diabetes Community for support, resources, and guidance for people living with diabetes in Salt Lake City.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sebasosax.github.io/wdd231/Final/contact.html">
     <meta property="og:image" content="https://sebasosax.github.io/wdd231/Final/images/logo.webp">
@@ -55,15 +55,13 @@
 </header>
 
 <main class="container">
-    <!-- H1 único de la página -->
-    <h1>Contact Salt Lake Diabetes Community</h1>
 
     <section class="contact-section">
         <div class="container">
 
             <!-- Información de contacto -->
             <div class="info-box">
-                <h2>Contact Information</h2>
+                <h1>Contact Information</h1>
                 <p>
                     Reach out to Salt Lake Diabetes Community. We're here to support you!
                 </p>
@@ -99,8 +97,7 @@
                         <label for="diabetes-no">No</label>
                     </div>
 
-                    <!-- Div oculto, ahora usando clase CSS -->
-                    <div id="diabetes-type-container" class="hidden">
+                    <div id="diabetes-type-container" style="display:none;">
                         <label for="diabetes-type">If yes, what type?</label>
                         <select id="diabetes-type" name="diabetes_type">
                             <option value="">Select type</option>
@@ -117,6 +114,7 @@
 
         </div>
     </section>
+
 </main>
 
 <footer>
