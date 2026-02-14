@@ -169,3 +169,37 @@
     }
 }
 
+/* ============================= */
+/* THANK YOU PAGE - LARGE CSS */
+/* ============================= */
+
+@media (min-width: 768px) {
+    .thankyou-box {
+        max-width: 600px;
+        padding: 3rem 2rem;
+    }
+
+    .thankyou-box h1 {
+        font-size: 2.5rem;
+    }
+
+    #submittedData li {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+    }
+}
+
+@media (min-width: 1100px) {
+    .thankyou-box {
+        max-width: 700px;
+        padding: 4rem 3rem;
+    }
+
+    .thankyou-box h1 {
+        font-size: 3rem;
+    }
+
+    #submittedData li {
+        font-size: 1.1rem;
+    }
+}

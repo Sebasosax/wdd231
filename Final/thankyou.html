@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sebastián Sosa">
+    <meta name="description" content="Salt Lake Diabetes Community Thank You Page">
+    <title>Thank You | Salt Lake Diabetes Community</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+
+    <!-- JS -->
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="container nav-container">
+        <div class="logo">
+            <img src="images/logo.webp" alt="Salt Lake Diabetes Community Logo" class="logo-img" loading="lazy">
+            <span>Salt Lake Diabetes</span>
+        </div>
+
+        <nav aria-label="Main Navigation">
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="understanding.html">Education</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+  <section class="thankyou-section">
+    <div class="thankyou-box">
+      <h1>Thank You!</h1>
+      <p id="thankMessage">
+        We appreciate you reaching out to the Salt Lake Diabetes Community. Here’s a summary of your submission:
+      </p>
+      
+      <!-- Mini carta con datos enviados -->
+      <div id="submittedData" class="submitted-data-box">
+        <!-- Los datos se llenarán mediante JS -->
+      </div>
+      
+      <p style="margin-top: 1.5rem;">We will get back to you shortly!</p>
+      <a href="index.html" class="btn">Return Home</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+    <div class="container footer-grid">
+
+        <div class="social-links">
+            <p>Follow Us</p>
+            <div class="icons">
+                <a href="https://www.facebook.com/SaltLakeDiabetes" target="_blank" aria-label="Facebook">
+                    <img src="images/facebook.webp" alt="Facebook Icon">
+                </a>
+                <a href="https://www.instagram.com/SaltLakeDiabetes" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram.webp" alt="Instagram Icon">
+                </a>                
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <p>Salt Lake City, Utah</p>
+            <p>&copy; 2026 Salt Lake Diabetes Community</p>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
